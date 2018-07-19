@@ -1,0 +1,33 @@
+<!--
+  Copyright 2017 PerceptIn
+
+  This End-User License Agreement (EULA) is a legal agreement between you
+  (the purchaser) and PerceptIn regarding your use of
+  PerceptIn Robotics Vision System (PIRVS), including PIRVS SDK and
+  associated documentation (the "Software").
+
+  IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS EULA, DO NOT INSTALL,
+  USE OR COPY THE SOFTWARE.
+
+   :+++++;                                                  ++'
+   ++++++++;                                                ++'
+   ++`   .++ .'''''` '''',     :':   `''''', ;''':  '''''''`++' '`   ''
+   ++`    ++ ++''''.;+'''++, ;++'++, ++'''',,+'''++:+''++''.++',+'   ++
+   ++`  :+++ ++     ;+.   ++ ++   ++ ++     ,+,   ++   ++   ++',+++  ++
+   +++++++`  ++     ;+.  .++ ++      ++     ,+,  .++   ++   ++',+++. ++
+   +++:`     +++++  ;+.;++'  ++      +++++  ,+++++;    ++   ++',+,++ ++
+   ++`       ++```  ;+`++    ++      ++```  ,+'.       ++   ++',+,,+'++
+   ++`       ++     ;+.,++   ++      ++     ,+,        ++   ++',+, ++++
+   ++`       ++     ;+. :++  ++. ,++ ++     ,+,        ++   ++',+,  +++
+   '+`       ++''''.:+.  ;++  '+'+'  ++'''',,+,        '+   ++',+,  ;+'
+-->
+
+<launch>
+	<group ns = "pirvs_cam_depth">
+		<node pkg="pirvs_ros" name="depth_camera_node" type="depth_camera_node"/>
+    </group>
+
+    <node name="image_view_left" pkg="image_view" type="image_view" args="image:=/pirvs_cam_depth/StereoImage/rect_left" output="screen" />
+    <node name="image_view_right" pkg="image_view" type="image_view" args="image:=/pirvs_cam_depth/StereoImage/rect_right" output="screen" />
+
+</launch>

@@ -1,0 +1,32 @@
+<!--
+  Copyright 2017 PerceptIn
+
+  This End-User License Agreement (EULA) is a legal agreement between you
+  (the purchaser) and PerceptIn regarding your use of
+  PerceptIn Robotics Vision System (PIRVS), including PIRVS SDK and
+  associated documentation (the "Software").
+
+  IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS EULA, DO NOT INSTALL,
+  USE OR COPY THE SOFTWARE.
+
+   :+++++;                                                  ++'
+   ++++++++;                                                ++'
+   ++`   .++ .'''''` '''',     :':   `''''', ;''':  '''''''`++' '`   ''
+   ++`    ++ ++''''.;+'''++, ;++'++, ++'''',,+'''++:+''++''.++',+'   ++
+   ++`  :+++ ++     ;+.   ++ ++   ++ ++     ,+,   ++   ++   ++',+++  ++
+   +++++++`  ++     ;+.  .++ ++      ++     ,+,  .++   ++   ++',+++. ++
+   +++:`     +++++  ;+.;++'  ++      +++++  ,+++++;    ++   ++',+,++ ++
+   ++`       ++```  ;+`++    ++      ++```  ,+'.       ++   ++',+,,+'++
+   ++`       ++     ;+.,++   ++      ++     ,+,        ++   ++',+, ++++
+   ++`       ++     ;+. :++  ++. ,++ ++     ,+,        ++   ++',+,  +++
+   '+`       ++''''.:+.  ;++  '+'+'  ++'''',,+,        '+   ++',+,  ;+'
+-->
+<launch>
+
+
+  <include file="$(find pirvs_ros)/launch/slam.launch" />
+
+  <!-- Launch rivz display -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pirvs_ros)/rviz/ironsides.rviz" output="screen" />
+
+</launch>
