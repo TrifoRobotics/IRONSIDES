@@ -168,6 +168,11 @@ int main(int argc, char **argv) {
                      timestamp);
       pub_left.publish(image_msg_left);
       pub_right.publish(image_msg_right);
+
+      // Publish camera info
+      camera_calib_msg_left.header = image_msg_left->header;
+      camera_calib_msg_right.header = image_msg_right->header;
+
       pub_left_cam_info.publish(camera_calib_msg_left);
       pub_right_cam_info.publish(camera_calib_msg_right);
     }
