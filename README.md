@@ -77,4 +77,4 @@ This package lets you use the Ironsides visual inertial computing module with RO
     - add odometry, listen topic "odom"
     - set fixed frame to my frame
 
-For more information visit [PerceptIn ROS Wiki](https://wiki.ros.org/perceptin)
+For more information visit [Trifo ROS Wiki](https://wiki.ros.org/trifo)
